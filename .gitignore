@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Data files (large; download separately, see README)
+*.parquet
+*.csv
+*.zip
+
+# Secrets — never commit
+.env
+*.pem
+*.key
+
+# Editor / OS noise
+.vscode/
+.idea/
+.DS_Store
+
+# Kubernetes / Helm local state
+*.kube/

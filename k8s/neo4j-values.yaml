@@ -1,0 +1,21 @@
+# Helm values for the Neo4j deployment.
+# IMPORTANT: replace the placeholder password below with your own secure
+# password before deploying. Never commit real credentials.
+neo4j:
+  name: neo4j
+  password: "CHANGE_ME__set_your_own_password"
+
+services:
+  neo4j:
+    enabled: true
+
+plugins:
+  - graph-data-science
+
+volumes:
+  data:
+    mode: defaultStorageClass
+
+config:
+  dbms.security.procedures.unrestricted: "gds.*"
+  dbms.security.procedures.allowlist: "gds.*"
